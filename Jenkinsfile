@@ -1,17 +1,9 @@
 pipeline {
     agent any
-
     stages {
-        stage('Clone Code') {
+        stage('Test') {
             steps {
-                git 'https://github.com/Nikhil777331/devops-project.git'
-            }
-        }
-
-        stage('Build & Deploy') {
-            steps {
-                sh 'chmod +x deploy.sh'
-                sh './deploy.sh'
+                echo 'Pipeline is working'
             }
         }
     }
